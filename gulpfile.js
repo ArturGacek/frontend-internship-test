@@ -5,6 +5,13 @@ const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
+const prettier = require('gulp-prettier');
+
+gulp.task('default', () => {
+    return gulp.src('*.js')
+        .pipe(prettier({ singleQuote: true }))
+        .pipe(gulp.dest('./dist'));
+});
 
 gulp.task('browserSync', function() {
   browserSync.init({

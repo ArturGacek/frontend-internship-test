@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,31 @@
   <body>
     <section class="main">
       <button id="show-popup-form" class="btn btn-main">Click me!</button>
-      <!-- Display success message below -->
+      <div class="login-confirmation hidden">Thank You!</div>
+      <div class="popup hidden">
+        <form action="#" class="login-form">
+          <button type="submit" class="cancel" >X</button>
+          <h3 class="login-formHeader">Login</h3>
+          <div class="login-formControl">
+            <label for="email"></label>
+            <input class="login-formControl__input" name="email" id="email" type="email" placeholder="E-mail">
+            <p class="error" id="emailErr"></p>
+          </div>
+          <div class="login-formControl">
+            <label for="password"></label>
+            <input class="login-formControl__input" name="password" id="password" type="password" placeholder="Password">
+            <p class="error" id="passwordErr"></p>
+          </div>
+          <div class="login-checkbox">
+            <input type="checkbox" id="terms-checkbox" name="terms-checkbox" checked required>
+            <label for="terms-checkbox">I agree to terms & conditions</label>
+          </div>
+          <div class="login-formControl">
+            <input type="submit" class="login-button" value="SUBMIT">
+          </div>
+        </form>
+      </div>
     </section>
-    <div class="popup">
-      <!-- Here goes your popup form HTML code -->
-    </div>
     <script src="js/index.min.js" charset="utf-8"></script>
   </body>
 </html>
